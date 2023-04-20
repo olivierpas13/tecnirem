@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 
-const pages = [ 'Inicio', 'Servicios', 'Contacto'];
+const pages = ['Servicios', 'Contacto'];
 
 const NavBar = () => {
 

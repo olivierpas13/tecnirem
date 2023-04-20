@@ -4,12 +4,11 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 
-import NavBar from '../../components/Navbar';
+import MainLayout from 'src/layouts/MainLayout';
 
 const LandingPage = () => {
   return (
-    <>
-      <NavBar/>
+    <MainLayout>
       <Box sx={{ paddingTop: '64px' }}>
         <Box
           sx={{
@@ -38,9 +37,8 @@ const LandingPage = () => {
           style={{
             display: 'block',
             position: 'relative',
-            width: '30em',
+            width: '28em',
             height: '10em',
-            marginRight: '1em',
             marginBottom: "-1.5em"
           }}
         >
@@ -63,7 +61,7 @@ const LandingPage = () => {
           {/* Add your content here */}
         </Container>
       </Box>
-    </>
+    </MainLayout>
   );
 }
 
