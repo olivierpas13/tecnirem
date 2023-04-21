@@ -1,7 +1,7 @@
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { mainTheme } from "utils/Pallete";
+import { mainTheme } from "@/utils/Pallete";
 
 const Inspection = () => {
   return (

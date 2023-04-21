@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import Image from 'next/image';
 import Typography from '@mui/material/Typography';
-import { mainTheme } from 'utils/Pallete';
+
+import { mainTheme } from '@/utils/Pallete';
 
 const images = [
   {
