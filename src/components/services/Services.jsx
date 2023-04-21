@@ -3,10 +3,8 @@ import Image from "next/image";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-import Process from "../Process";
 import { mainTheme } from "@/utils/Pallete";
 import Cards from "./Cards";
 
