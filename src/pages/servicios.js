@@ -1,7 +1,7 @@
-import Services from "components/Services";
-import MainLayout from "src/layouts/MainLayout";
+import MainLayout from "@/layouts/MainLayout";
+import Services from "@/components/services/Services";
 
-const Acerca = () => {
+const Servicios = () => {
     return (
         <MainLayout>
             <Services/>
@@ -9,4 +9,4 @@ const Acerca = () => {
     );
 }
  
-export default Acerca;
+export default Servicios;
