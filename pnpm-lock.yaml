@@ -4,6 +4,7 @@ specifiers:
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
   '@fontsource/roboto': ^4.5.8
+  '@mui/lab': 5.0.0-alpha.127
   '@mui/material': ^5.12.1
   eslint: 8.38.0
   eslint-config-next: 13.3.0
@@ -16,6 +17,7 @@ dependencies:
   '@emotion/react': 11.10.6_react@18.2.0
   '@emotion/styled': 11.10.6_3og6jmu6wvzuytygvdoxepq3x4
   '@fontsource/roboto': 4.5.8
+  '@mui/lab': 5.0.0-alpha.127_fqvezta3xfy6cgndsu5fnnfcqm
   '@mui/material': 5.12.1_fbxtuirhogpez7m7qjkm3itwca
   eslint: 8.38.0
   eslint-config-next: 13.3.0_eslint@8.38.0
@@ -275,6 +277,39 @@ packages:
 
   /@mui/core-downloads-tracker/5.12.1:
     resolution: {integrity: sha512-rNiQYHtkXljcvCEnhWrJzie1ifff5O98j3uW7ZlchFgD8HWxEcz/QoxZvo+sCKC9aayAgxi9RsVn2VjCyp5CrA==}
+    dev: false
+
+  /@mui/lab/5.0.0-alpha.127_fqvezta3xfy6cgndsu5fnnfcqm:
+    resolution: {integrity: sha512-D+Q7MV06rn31g8ZgNcLxgsmh94PJYfyqXAcM3BokgMJ4u89QfwneSlaoHnQ9qitvWFyTz7Ic4HVMNT08FkRG7Q==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@emotion/react': ^11.5.0
+      '@emotion/styled': ^11.3.0
+      '@mui/material': ^5.0.0
+      '@types/react': ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/react':
+        optional: true
+      '@emotion/styled':
+        optional: true
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@emotion/react': 11.10.6_react@18.2.0
+      '@emotion/styled': 11.10.6_3og6jmu6wvzuytygvdoxepq3x4
+      '@mui/base': 5.0.0-alpha.126_biqbaboplfbrettd7655fr4n2y
+      '@mui/material': 5.12.1_fbxtuirhogpez7m7qjkm3itwca
+      '@mui/system': 5.12.1_xqp3pgpqjlfxxa3zxu4zoc4fba
+      '@mui/types': 7.2.4
+      '@mui/utils': 5.12.0_react@18.2.0
+      clsx: 1.2.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-is: 18.2.0
     dev: false
 
   /@mui/material/5.12.1_fbxtuirhogpez7m7qjkm3itwca:
