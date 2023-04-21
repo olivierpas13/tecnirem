@@ -4,12 +4,9 @@ import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 
-import MainLayout from 'src/layouts/MainLayout';
-
-const LandingPage = () => {
-  return (
-    <MainLayout>
-      <Box sx={{ paddingTop: '64px' }}>
+const HeroSection = () => {
+    return (
+        <Box sx={{ paddingTop: '64px' }}>
         <Box
           sx={{
             height: 'calc(100vh - 64px)',
@@ -61,8 +58,7 @@ const LandingPage = () => {
           {/* Add your content here */}
         </Container>
       </Box>
-    </MainLayout>
-  );
+    );
 }
-
-export default LandingPage;
+ 
+export default HeroSection;
