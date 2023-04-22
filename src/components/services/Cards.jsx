@@ -1,12 +1,6 @@
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
 
-import { mainTheme } from "@/utils/Pallete";
+import CardComponent from "../Card";
 
 export default function Cards() {
   const servicesData = [
@@ -59,44 +53,7 @@ export default function Cards() {
       {servicesData.map((service) => {
         return (
           <Grid item key={service.title} xs={1} md={1} sx={{margin: "0 auto"}}>
-            <Card>
-              <CardMedia
-                sx={{ height: 300 }}
-                image={service.imageSource}
-                title={service.title}
-              />
-              <CardContent>
-              <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              lineHeight: 1,
-              my: "1em",
-              color: mainTheme.palette.primary.main,
-            }}
-          >                  {service.title}
-                </Typography>
-                <Typography
-            variant="subtitle2"
-            sx={{ fontWeight: 300, lineHeight: 2 }}
-          >                  {service.description}
-                </Typography>
-              </CardContent>
-              <CardActions sx={{display: "flex", justifyContent: "center", margin: "1em"}}>
-              <Button
-              size="large"
-              color="secondary"
-              sx={{
-                color: mainTheme.palette.secondary.dark,
-                '&:hover': {
-                  backgroundColor: mainTheme.palette.secondary.main,
-                },
-              }}            
-              variant="outlined"
-                style={{ margin: "1.5em" }}
-          >{service.buttonText}</Button>
-              </CardActions>
-            </Card>
+          <CardComponent title={service.title} imageSrc={service.imageSource} description={service.description} buttonText={service.buttonText} />
           </Grid>
         );
       })}

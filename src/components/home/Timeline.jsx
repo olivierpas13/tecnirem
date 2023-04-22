@@ -6,6 +6,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 import {
   BiMessageDetail,
@@ -16,7 +17,8 @@ import {
 
 export default function CustomizedTimeline() {
   return (
-    <Timeline style={{margin: "2.5em 0"}} position="alternate">
+    <Container maxWidth={false}>
+    <Timeline style={{margin: "2.5em -2em"}} position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: "auto 0" }}
@@ -116,5 +118,7 @@ export default function CustomizedTimeline() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </Container>
+
   );
 }

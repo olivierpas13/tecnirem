@@ -1,14 +1,33 @@
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+
 import { mainTheme } from "@/utils/Pallete";
+import CardComponent from "../Card";
 
 const Inspection = () => {
+
+  const inspectionInfo ={
+    title: "Inspección gratuita",
+    description: "¿Listo para dar el primer paso en tu proyecto? ¡Comienza con una inspección gratuita y sin compromiso! Nuestro equipo trabajará contigo para asegurarse de que tengas la mejor solución a tus necesidades.",
+    buttonText: "Agenda tu cita",
+    imageSrc: "/bg-about-dark.jpg",
+  }
+
   return (
-    <Grid container spacing={2} sx={{ height: "90vh", paddingTop: "20px" }}>
+<Container maxWidth={false} >
+<CardComponent
+  smallDevice
+  title={inspectionInfo.title}
+  description={inspectionInfo.description}
+  buttonText={inspectionInfo.buttonText}
+  imageSrc={inspectionInfo.imageSrc}
+/>
+<Grid container spacing={2} sx={{display: {xs: "none", md: "flex"}, height: "90vh", paddingTop: "20px" }}>
       <Grid
         style={{
-          backgroundImage: `url(/bg-about-dark.jpg)`,
+          backgroundImage: `url(${inspectionInfo.imageSrc})`,
           backgroundSize: "cover",
         }}
         item
@@ -18,21 +37,21 @@ const Inspection = () => {
         <Typography
           variant="h4"
           sx={{ fontWeight: 700, lineHeight: 1, my: "1em" }}
-        >
-          Inspección <span style={{color: mainTheme.palette.primary.main}}>gratuita</span>
+        >{inspectionInfo.title.split(" ")[0]}
+           <span style={{color: mainTheme.palette.primary.main}}> {inspectionInfo.title.split(" ")[1]}</span>
         </Typography>
         <Typography variant="subtitle2" sx={{ fontSize: "1.3em", fontWeight: 300, lineHeight: 2 }}>
-          ¿Listo para dar el primer paso en tu proyecto? ¡Comienza con una
-          inspección <span style={{color: mainTheme.palette.primary.main}}>gratuita</span> y sin compromiso! Nuestro equipo trabajará contigo
-          para asegurarse de que tengas la mejor solución a tus necesidades.
+          {inspectionInfo.description}
         </Typography>
         <Button size="large" variant="contained" color="secondary" style={{margin: "1em", marginTop: "3em"}} >
             <span style={{color: mainTheme.palette.white.main}}>
-            Agenda tu cita
+          {inspectionInfo.buttonText}
             </span>
         </Button>
       </Grid>
     </Grid>
+</Container>
+
   );
 };
 
