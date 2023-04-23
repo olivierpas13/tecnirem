@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import MainLayout from 'src/layouts/MainLayout';
 
-const LandingPage = () => {
+const About = () => {
   return (
     <MainLayout>
       <Box sx={{ paddingTop: '64px' }}>
@@ -71,4 +71,4 @@ const LandingPage = () => {
   );
 }
 
-export default LandingPage;
+export default About;

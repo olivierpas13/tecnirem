@@ -1,5 +1,5 @@
-import About from "components/About";
-import MainLayout from "src/layouts/MainLayout";
+import About from "@/components/About"
+import MainLayout from "@/layouts/MainLayout";
 
 const Acerca = () => {
     return (

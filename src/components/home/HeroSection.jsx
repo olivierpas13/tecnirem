@@ -27,14 +27,13 @@ const HeroSection = () => {
               left: '50%',
               transform: 'translate(-50%, -50%)',
               textAlign: 'center',
-              // color: '#fff',
             }}
           >
-          <div
-          style={{
+          <Box
+          sx={{
             display: 'block',
             position: 'relative',
-            width: '28em',
+            width:{sx:"10em", md:'28em'},
             height: '10em',
             marginBottom: "-1.5em"
           }}
@@ -45,7 +44,7 @@ const HeroSection = () => {
             quality={100}
             alt="Tecnirem Logo"
           />
-        </div>
+        </Box>
             <Typography color="black" variant="h5" component="p" gutterBottom>
                 Adecuación Y Remodelación De Ambientes
             </Typography>
@@ -54,9 +53,6 @@ const HeroSection = () => {
             </Button>
           </Box>
         </Box>
-        <Container sx={{ marginTop: '48px' }}>
-          {/* Add your content here */}
-        </Container>
       </Box>
     );
 }
