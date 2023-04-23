@@ -1,11 +1,12 @@
-import Head from "next/head";
-
-import { ThemeProvider } from "@emotion/react";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { mainTheme } from "src/utils/Pallete";
+
+import Head from "next/head";
+
+import { mainTheme } from "@/utils/Pallete";
+import { ThemeProvider } from "@emotion/react";
 
 export default function App({ Component, pageProps }) {
   return (
