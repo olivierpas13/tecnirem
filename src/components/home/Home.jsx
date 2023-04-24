@@ -5,7 +5,14 @@ import Timeline from "./Timeline";
 
 const Home = () => {
     return (
-        <section>
+        <section
+        
+        style={{
+            padding: "0",
+            margin: "0",
+            overflowX: "hidden",
+          }}  
+        >
             <HeroSection/>
             <Inspection/>
             <Timeline/>
