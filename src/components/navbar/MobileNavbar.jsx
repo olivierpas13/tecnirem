@@ -20,10 +20,24 @@ const MobileNavbar = ({ setIsSidebarVisible }) => {
     return (
       <Box
         role="presentation"
+        sx={{
+          padding: "1.5em 0.5em",
+        }}
         onClick={() => {setIsSidebarVisible(false);}}
         onKeyDown={() => {setIsSidebarVisible(false);}}
       >
         <List>
+          <ListItem  disablePadding>
+            <ListItemButton onClick={() => {handleOptionClick('/');}} >
+              <ListItemIcon>
+                <FiMenu />
+              </ListItemIcon>
+              <ListItemText>
+              Inicio
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+          <Divider />
           <ListItem  disablePadding>
             <ListItemButton onClick={() => {handleOptionClick('quienes-somos');}} >
               <ListItemIcon>
