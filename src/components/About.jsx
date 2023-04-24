@@ -1,14 +1,10 @@
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
 
-import MainLayout from 'src/layouts/MainLayout';
-
 const About = () => {
   return (
-    <MainLayout>
       <Box sx={{ paddingTop: '64px' }}>
         <Box
           sx={{
@@ -63,11 +59,7 @@ const About = () => {
             </Button>
           </Box>
         </Box>
-        <Container sx={{ marginTop: '48px' }}>
-          {/* Add your content here */}
-        </Container>
       </Box>
-    </MainLayout>
   );
 }
 

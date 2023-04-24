@@ -7,10 +7,8 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
-
+import MobileNavbar from './MobileNavbar';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 
@@ -29,7 +27,7 @@ const NavBar = () => {
   };
 
   return (
-      <AppBar position="fixed" color="tertiary">
+      <AppBar sx={{display: {xs: "none", md: "flex"}}} position="fixed" color="tertiary">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box
@@ -50,41 +48,19 @@ const NavBar = () => {
                   />
               </Link>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                onClick={handleOpenNavMenu}
+                onClick={()=>{
+                  setIsMobileSidebarVisible(true);
+                }}
                 color="primary"
               >
                 <GiHamburgerMenu />
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: 'block', md: 'none' },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
               <Link
@@ -102,7 +78,7 @@ const NavBar = () => {
                     alt="Tecnirem Logo"
                   />
               </Link>
-            </Box>
+            </Box> */}
             <Box sx={{ flexGrow: 1 }} />
             <Box
               sx={{ display: { xs: 'none', md: 'flex', marginRight: '2em' } }}
