@@ -10,7 +10,7 @@ const Home = () => {
         style={{
             padding: "0",
             margin: "0",
-            overflowX: "hidden",
+            overflow: "hidden",
           }}  
         >
             <HeroSection/>
