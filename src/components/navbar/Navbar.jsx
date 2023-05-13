@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,9 +14,10 @@ import MenuItem from "@mui/material/Container";
 import MobileNavbar from "./MobileNavbar";
 
 const pages = ["Servicios", "Estilos","Contacto"];
-const services = ["Service 1", "Service 2", "Service 3"]; // Add your services here
+const services = ["Adecuacion de espacios", "Diseño", "Remodelacion"]; // Add your services here
 
 const NavBar = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -95,11 +97,13 @@ const NavBar = () => {
               >
 
 {page === "Servicios" ? (
-                  <>
+                  <div                       onMouseEnter={(e)=>handleClick(e)}
+                  >
                     <Button
                       aria-controls="services-menu"
                       aria-haspopup="true"
-                      onMouseEnter={handleClick}
+                      // onMouseEnter={(e)=>handleClose(e)}
+                      onClick={()=>{router.push("/servicios")}}
                       sx={{
                         color: "#14213d",
                         padding: "0.7em",
@@ -130,19 +134,26 @@ const NavBar = () => {
                           key={service}
                           onClick={()=>handleClose()}
                           sx={{
+                            textDecoration: "none",
                             "&:hover": {
-                              backgroundColor: "#fca311",
-                              color: "#14213d",
+                              backgroundColor: "black",
+                              color: "white",
                             },
                           }}
                         >
-                          <Link href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                          <Link                           sx={{
+                            textDecoration: "none",
+                            "&:hover": {
+                              backgroundColor: "black",
+                              color: "white",
+                            },
+                          }} href={`/servicios/${service.toLowerCase().replace(/\s+/g, '-').replace("ñ", "n")}`}>
                             {service}
                           </Link>
                         </MenuItem>
                       ))}
                     </Menu>
-                  </>
+                  </div>
                 ):
 
 
