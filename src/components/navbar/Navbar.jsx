@@ -1,135 +1,163 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import MobileNavbar from './MobileNavbar';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Menu from "@mui/material/Menu";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/Container";
+import MobileNavbar from "./MobileNavbar";
 
-
-const pages = ['Servicios', 'Contacto'];
+const pages = ["Servicios", "Estilos","Contacto"];
+const services = ["Service 1", "Service 2", "Service 3"]; // Add your services here
 
 const NavBar = () => {
-
-  const [anchorElNav, setAnchorElNav] = useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
-      <AppBar sx={{display: {xs: "none", md: "flex"}}} position="fixed" color="tertiary">
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <Box
-              sx={{ display: { xs: 'none', md: 'flex', marginRight: '2em' } }}
+    <AppBar
+      sx={{ display: { xs: "none", md: "flex" } }}
+      position="fixed"
+      color="tertiary"
+    >
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box sx={{ display: { xs: "none", md: "flex", marginRight: "2em" } }}>
+            <Link
+              style={{
+                display: "block",
+                position: "relative",
+                width: "200px",
+                height: "60px",
+                marginRight: "1em",
+              }}
+              href="/"
+              passHref
             >
-              <Link style={{
-                    display: 'block',
-                    position: 'relative',
-                    width: '200px',
-                    height: '60px',
-                    marginRight: '1em',
-                  }} href="/" passHref>                  
-                  <Image
-                    fill
-                    src="/tecnirem-logo-dark.svg"
-                    quality={100}
-                    alt="Tecnirem Logo"
-                  />
-              </Link>
-            </Box>
-            {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={()=>{
-                  setIsMobileSidebarVisible(true);
-                }}
-                color="primary"
-              >
-                <GiHamburgerMenu />
-              </IconButton>
-            </Box>
-            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-              <Link
-                    style={{
-                    display: 'block',
-                    position: 'relative',
-                    width: '200px',
-                    height: '60px',
-                    marginRight: '1em',
-                  }} href="/" passHref>
-                  <Image
-                    fill
-                    src="/tecnirem-logo-dark.svg"
-                    quality={100}
-                    alt="Tecnirem Logo"
-                  />
-              </Link>
-            </Box> */}
-            <Box sx={{ flexGrow: 1 }} />
-            <Box
-              sx={{ display: { xs: 'none', md: 'flex', marginRight: '2em' } }}
+              <Image
+                fill
+                src="/tecnirem-logo-dark.svg"
+                quality={100}
+                alt="Tecnirem Logo"
+              />
+            </Link>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: "none", md: "flex", justifyContent: "center", alignItems: "center", marginRight: "2em" } }}>
+            <Typography
+              sx={{
+                mr: 4,
+                display: "block",
+                "& a": {
+                  color: "#14213d",
+                  padding: "0.7em",
+                  borderRadius: "0.9em",
+                  textDecoration: "none",
+                  "&:hover": {
+                    color: "#eee",
+                    backgroundColor: "#14213d",
+                    transition: "background-color 0.3s",
+                  },
+                },
+              }}
             >
+              <Link href={"/quienes-somos"}>QUIENES SOMOS</Link>
+            </Typography>
+            {pages.map((page) => (
               <Typography
+                key={page}
                 sx={{
                   mr: 4,
-                  display: 'block',
-                  '& a': {
-                    color: '#14213d',
-                    padding: '0.7em',
-                    borderRadius: '0.9em',
-                    textDecoration: 'none',
-                    '&:hover': {
-                      backgroundColor: '#eee',
-                      transition: 'background-color 0.3s',
+                  display: "block",
+                  "& a": {
+                    color: "#14213d",
+                    padding: "0.7em",
+                    borderRadius: "0.7em",
+                    textDecoration: "none",
+                    "&:hover": {
+                      color: "#eee",
+                      backgroundColor: "#14213d",
+                      transition: "background-color 0.3s",
                     },
                   },
                 }}
               >
-                <Link href={'/quienes-somos'}>
-                  QUIENES SOMOS
-                </Link>
+
+{page === "Servicios" ? (
+                  <>
+                    <Button
+                      aria-controls="services-menu"
+                      aria-haspopup="true"
+                      onMouseEnter={handleClick}
+                      sx={{
+                        color: "#14213d",
+                        padding: "0.7em",
+                        borderRadius: "0.7em",
+                        textDecoration: "none",
+                        "&:hover": {
+                          color: "#eee",
+                          backgroundColor: "#14213d",
+                          transition: "background-color 0.3s",
+                        },
+                      }}
+                    >
+                      {page.toUpperCase()}
+                    </Button>
+                    <Menu
+                      id="services-menu"
+                      anchorEl={anchorEl}
+                      keepMounted
+                      open={open}
+                      onClose={handleClose}
+                      onMouseLeave={handleClose}
+                      MenuListProps={{
+                        onMouseLeave: handleClose,
+                      }}
+                    >
+                      {services.map((service) => (
+                        <MenuItem
+                          key={service}
+                          onClick={()=>handleClose()}
+                          sx={{
+                            "&:hover": {
+                              backgroundColor: "#fca311",
+                              color: "#14213d",
+                            },
+                          }}
+                        >
+                          <Link href={`/${service.toLowerCase().replace(/\s+/g, '-')}`}>
+                            {service}
+                          </Link>
+                        </MenuItem>
+                      ))}
+                    </Menu>
+                  </>
+                ):
+
+
+
+                <Link
+                href={`/${page.toLowerCase()}`}>
+                  {page.toUpperCase()}
+                  
+                </Link>}
               </Typography>
-              {pages.map((page) => (
-                <Typography
-                  key={page}
-                  sx={{
-                    mr: 4,
-                    display: 'block',
-                    '& a': {
-                      color: '#14213d',
-                      padding: '0.7em',
-                      borderRadius: '0.7em',
-                      textDecoration: 'none',
-                      '&:hover': {
-                        backgroundColor: '#eee',
-                        transition: 'background-color 0.3s',
-                      },
-                    },
-                  }}
-                >
-                  <Link href={`/${page.toLowerCase()}`}>
-                    {page.toUpperCase()}
-                  </Link>
-                </Typography>
-              ))}
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
 export default NavBar;

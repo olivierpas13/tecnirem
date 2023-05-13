@@ -1,80 +1,53 @@
 import Link from "next/link";
-
+import MainLayout from "@/layouts/MainLayout";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
 
+import LeftImageSection from "@/components/global/LeftImageSection";
 import { mainTheme } from "@/utils/Pallete";
-import Cards from "./Cards";
 
-const Services = () => {
+const Adecuacion = () => {
   return (
-    <Container
-      maxWidth={false}
-      sx={{
-        marginTop: "60px",
-        height: "100%",
-      }}
-    >
-      <Typography
-        variant="h4"
+    <MainLayout>
+      <Container
+        maxWidth={false}
         sx={{
-          fontWeight: 600,
-          py: "1rem",
-          textAlign: "center",
-          color: mainTheme.palette.primary.main,
-          textTransform: "uppercase",
+          marginTop: "60px",
+          height: "100%",
+          padding: "2em",
         }}
       >
-        Nuestros servicios
-      </Typography>
-      <Grid container columns={{ xs: 1, md: 12 }} spacing={2} sx={{ display: { xs: "none", md: "flex" }, height: "100%", marginTop: "1%" }}>
-        <Grid
+        <Typography
+          variant="h4"
           sx={{
-            display: { xs: "none", md: "flex" },
-            backgroundImage: `url(/diseño.webp)`,
+            fontWeight: "800",
+            textAlign: "center",
+            textTransform: "capitalize",
           }}
-          item
-          xs={1}
-          md={7}
         >
-        </Grid>
-        <Grid
-          style={{ padding: "2em" }}
-          item
-          xs={1}
-          md={5}
+          Adecuación de espacios
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            fontWeight: "800",
+            textAlign: "center",
+            textTransform: "capitalize",
+          }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              lineHeight: 1,
-              my: "1em",
-              color: mainTheme.palette.primary.main,
-            }}
-          >
-            Diseño
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontWeight: 300, lineHeight: 2.2 }}
-          >
-            En nuestro servicio de diseño de interiores, trabajamos de la mano
-            con nuestros clientes para transformar sus espacios comerciales en
-            ambientes atractivos y funcionales. Nos especializamos en el diseño
-            de locales e islas comerciales, así como en la adecuación y
-            remodelación de oficinas, con el objetivo de crear espacios únicos y
-            a medida para cada cliente. Con nuestra amplia experiencia en el
-            diseño de interiores, podemos ayudarlo a dar vida a su visión y
-            crear un espacio que refleje la personalidad y el carácter de su
-            negocio.
-          </Typography>
-          <Button variant="outlined" style={{ margin: "1.5em" }}>
-            Conoce nuestros diseños
-          </Button>
-        </Grid>
+          A continuación, algunos trabajos que engloba la adecuación de
+          espacios:
+        </Typography>
+
+        <Grid container columns={{ xs: 1, md: 12 }} spacing={2} sx={{ display: { xs: "none", md: "flex" }, height: "100%", marginTop: "1%" }}>
+        <LeftImageSection
+        title={'Reorganización de los elementos existentes'}
+        description={'Cambiar la disposición de los muebles, estanterías, superficies de trabajo, equipos y otros elementos para mejorar la funcionalidad del espacio. '}
+        imageUrl={"/adecuacion.webp"}
+        />
+
         <Grid style={{ padding: "4em" }} item xs={1} md={7}>
           <Typography
             variant="h4"
@@ -230,9 +203,9 @@ const Services = () => {
           </Button>
         </Grid>
       </Grid>
-      <Cards />
-    </Container>
+      </Container>
+    </MainLayout>
   );
 };
 
-export default Services;
+export default Adecuacion;

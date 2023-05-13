@@ -1,60 +1,82 @@
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Image from 'next/image';
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Carousel from "react-material-ui-carousel";
+import Box from "@mui/material/Box";
+import Image from "next/image";
+import { Paper } from "@mui/material";
 
 const HeroSection = () => {
-    return (
-        <Box sx={{ paddingTop: '64px' }}>
-        <Box
-          sx={{
-            height: 'calc(100vh - 64px)',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
+
+  return (
+    <Box sx={{ paddingTop: "64px" }}>
+      <Box
+        sx={{
+          height: "calc(100vh - 64px)",
+          overflow: "hidden",
+        }}
+      >
+        <Carousel
+        interval={3500}
         >
-          <Image
-            src="/bg-tecnirem.webp"
-            alt="Hero Image"
-            fill
-            quality={100}
-          />
           <Box
             sx={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              textAlign: 'center',
+              display: "flex",
+              flexDirection: "column",
+              height: "90vh",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundImage: "url(/bg-tecnirem.webp)",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
             }}
           >
-          <Box
-          sx={{
-            display: 'block',
-            position: 'relative',
-            width:{sx:"10em", md:'28em'},
-            height: '10em',
-            marginBottom: "-1.5em"
-          }}
-        >
           <Image
-            fill
+            width={400}
+            height={150}
             src="/tecnirem-logo-dark.svg"
             quality={100}
             alt="Tecnirem Logo"
           />
-        </Box>
-            <Typography color="black" variant="h5" component="p" gutterBottom>
-                Adecuación Y Remodelación De Ambientes
+
+            <Typography sx={{display: "flex", fontWeight: "500",}} variant="h5" >
+                Adecuación y Remodelación de Ambientes
             </Typography>
-            <Button style={{marginTop: "1em"}}variant="contained" color="primary">
-              Conócenos
+            <Button style={{marginTop: "2em"}}variant="contained" color="primary">
+              Contáctanos
             </Button>
           </Box>
-        </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+
+              height: "90vh",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundImage: "url(/bg-tecnirem2.jpg)",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+            }}
+          >
+          <Image
+            width={400}
+            height={150}
+            src="/tecnirem-logo-dark.svg"
+            quality={100}
+            alt="Tecnirem Logo"
+          />
+
+            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee",}} variant="h5" >
+              Renovamos tus ideas
+            </Typography>
+            <Button style={{marginTop: "2em"}}variant="contained" color="primary">
+              Contáctanos
+            </Button>
+            </Box>        
+        </Carousel>
       </Box>
-    );
-}
- 
+    </Box>
+  );
+};
+
 export default HeroSection;
