@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import Carousel from "react-material-ui-carousel";
 import Box from "@mui/material/Box";
 import Image from "next/image";
-import { Paper } from "@mui/material";
 
 const HeroSection = () => {
 
@@ -66,7 +65,7 @@ const HeroSection = () => {
             alt="Tecnirem Logo"
           />
 
-            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee",}} variant="h5" >
+            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee", textShadow: "black 0px"}} variant="h5" >
               Renovamos tus ideas
             </Typography>
             <Button style={{marginTop: "2em"}}variant="contained" color="primary">

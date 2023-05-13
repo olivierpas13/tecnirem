@@ -2,6 +2,7 @@ import HeroSection from "./HeroSection";
 import Inspection from "./Inspection";
 import ProjectsMasonry from "./ProjectsMasonry";
 import Timeline from "./Timeline";
+import ServicesCards from "./ServicesCards";
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <HeroSection/>
             <Inspection/>
             <Timeline/>
+            <ServicesCards/>
             <ProjectsMasonry/>
         </section>
     );

@@ -1,24 +1,13 @@
+
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { mainTheme } from "@/utils/Pallete";
 import { Button } from "@mui/material";
 
-const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescription, buttonColor }) => {
+const RightImageSection = ({ title, description, imageUrl, buttontext, bigDescription, buttonColor }) => {
   return (
     <>
-      <Grid
-        sx={{
-          height: "70vh",
-          display: { xs: "none", md: "flex" },
-          backgroundImage: `url(${imageUrl})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-        }}
-        item
-        xs={1}
-        md={7}
-      ></Grid>
-      <Grid style={{ padding: "4em" }} item xs={1} md={5}>
+      <Grid style={{ padding: "4em" }} item xs={1} md={7}>
         <Typography
           variant="h4"
           sx={{
@@ -42,8 +31,22 @@ const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescrip
           </Button>
         )}
       </Grid>
+      <Grid
+        sx={{
+          height: "70vh",
+          display: { xs: "none", md: "flex" },
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+        item
+        xs={1}
+        md={5}
+      ></Grid>
     </>
   );
 };
 
-export default LeftImageSection;
+export default RightImageSection;
+
+

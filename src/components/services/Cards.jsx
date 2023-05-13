@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid";
 
-import CardComponent from "../Card";
+import CardComponent from "../cards/Card";
 
 export default function Cards() {
   const servicesData = [

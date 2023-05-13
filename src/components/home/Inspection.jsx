@@ -1,10 +1,11 @@
-import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 import { mainTheme } from "@/utils/Pallete";
-import CardComponent from "../Card";
+import CardComponent from "../cards/Card";
+import LeftImageSection from "../global/LeftImageSection";
 
 const Inspection = () => {
 
@@ -12,7 +13,7 @@ const Inspection = () => {
     title: "Inspección gratuita",
     description: "¿Listo para dar el primer paso en tu proyecto? ¡Comienza con una inspección gratuita y sin compromiso! Nuestro equipo trabajará contigo para asegurarse de que tengas la mejor solución a tus necesidades.",
     buttonText: "Agenda tu cita",
-    imageSrc: "/bg-about-dark.jpg",
+    imageSrc: "/inspeccion1.jpg",
   }
 
   return (
@@ -24,7 +25,19 @@ const Inspection = () => {
   buttonText={inspectionInfo.buttonText}
   imageSrc={inspectionInfo.imageSrc}
 />
-<Grid container spacing={2} sx={{display: {xs: "none", md: "flex"}, height: "90vh", paddingTop: "20px" }}>
+<Grid container columns={{ xs: 1, md: 12 }} spacing={2} sx={{ display: { xs: "none", md: "flex" }, height: "100%", marginTop: "1%" }}>
+
+
+<LeftImageSection
+  title={inspectionInfo.title}
+  description={inspectionInfo.description}
+  buttontext={inspectionInfo.buttonText}
+  imageUrl={inspectionInfo.imageSrc}
+  bigDescription={true}
+  buttonColor={"secondary"}
+/>
+  </Grid>
+{/* <Grid container spacing={2} sx={{display: {xs: "none", md: "flex"}, height: "90vh", paddingTop: "20px" }}>
       <Grid
         style={{
           backgroundImage: `url(${inspectionInfo.imageSrc})`,
@@ -49,7 +62,7 @@ const Inspection = () => {
             </span>
         </Button>
       </Grid>
-    </Grid>
+    </Grid> */}
 </Container>
 
   );
