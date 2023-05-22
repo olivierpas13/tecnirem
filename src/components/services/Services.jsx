@@ -33,7 +33,9 @@ const Services = () => {
         <Grid
           sx={{
             display: { xs: "none", md: "flex" },
-            backgroundImage: `url(/diseño.webp)`,
+            backgroundImage: `url(/services/tec1.jpg)`,
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
           }}
           item
           xs={1}
@@ -50,12 +52,12 @@ const Services = () => {
             variant="h4"
             sx={{
               fontWeight: 700,
-              lineHeight: 1,
+              lineHeight: 1.2,
               my: "1em",
               color: mainTheme.palette.primary.main,
             }}
           >
-            Diseño
+            Diseño de oficinas modernas, consultorios y locales comerciales
           </Typography>
           <Typography
             variant="subtitle2"
@@ -130,12 +132,12 @@ const Services = () => {
             variant="h4"
             sx={{
               fontWeight: 700,
-              lineHeight: 1,
+              lineHeight: 1.3,
               my: "1em",
               color: mainTheme.palette.primary.main,
             }}
           >
-            Remodelación de oficinas y locales comerciales
+            Remodelación de oficinas modernas, consultorios y locales comerciales
           </Typography>
           <Typography
             variant="subtitle2"
@@ -151,82 +153,6 @@ const Services = () => {
           </Typography>
           <Button variant="outlined" style={{ margin: "1.5em" }}>
             Conoce el proceso
-          </Button>
-        </Grid>
-        <Grid style={{ padding: "4em" }} item xs={1} md={7}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              lineHeight: 1,
-              my: "1em",
-              color: mainTheme.palette.secondary.main,
-            }}
-          >
-            Islas comerciales
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontWeight: 300, lineHeight: 2.5 }}
-          >
-            En cuanto al diseño y construcción de islas comerciales, es perfecto
-            para aquellos que buscan atraer a más clientes y mejorar sus ventas.
-            Creamos soluciones personalizadas para cada cliente, teniendo en
-            cuenta las necesidades de su negocio y las tendencias actuales del
-            mercado. Nuestro equipo altamente capacitado se asegura de que cada
-            isla sea atractiva, funcional y de alta calidad.
-          </Typography>
-          <Button
-            color="secondary"
-            variant="outlined"
-            style={{ margin: "2em" }}
-          >
-            Agenda tu cita
-          </Button>
-        </Grid>
-        <Grid
-          style={{
-            backgroundImage: `url(/islas.webp)`,
-            backgroundSize: "cover",
-            display: { xs: "none", md: "flex" },
-          }}
-          item
-          xs={1}
-          md={5}
-        ></Grid>
-        <Grid
-          style={{
-            backgroundImage: `url(/pintura.webp)`,
-            backgroundSize: "cover",
-            display: { xs: "none", md: "flex" },
-          }}
-          item
-          xs={1}
-          md={7}
-        ></Grid>
-        <Grid style={{ padding: "4em" }} item xs={1} md={5}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 700,
-              lineHeight: 1,
-              my: "1em",
-              color: mainTheme.palette.primary.main,
-            }}
-          >
-            Pintura interior y exterior
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontWeight: 300, lineHeight: 2 }}
-          >
-            La pintura es una parte fundamental de cualquier proyecto de
-            renovación. En TecniRem contamos con expertos en pintura interior y
-            exterior, utilizando los mejores materiales y técnicas para lograr
-            acabados perfectos y duraderos.
-          </Typography>
-          <Button variant="outlined" style={{ margin: "1.5em" }}>
-            Cotizar
           </Button>
         </Grid>
       </Grid>

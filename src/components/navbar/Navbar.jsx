@@ -13,7 +13,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/Container";
 import MobileNavbar from "./MobileNavbar";
 
-const pages = ["Servicios", "Estilos","Contacto"];
+import { SiArchiveofourown } from "react-icons/si";
+
+const pages = ["Servicios", "Estilos", "Contacto"];
 const services = ["Adecuacion de espacios", "Diseño", "Remodelacion"]; // Add your services here
 
 const NavBar = () => {
@@ -56,7 +58,17 @@ const NavBar = () => {
             </Link>
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex", justifyContent: "center", alignItems: "center", marginRight: "2em" } }}>
+          <Box
+            sx={{
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "2em",
+              },
+            }}
+          >
             <Typography
               sx={{
                 mr: 4,
@@ -95,15 +107,15 @@ const NavBar = () => {
                   },
                 }}
               >
-
-{page === "Servicios" ? (
-                  <div                       onMouseEnter={(e)=>handleClick(e)}
-                  >
+                {page === "Servicios" ? (
+                  <div onMouseEnter={(e) => handleClick(e)}>
                     <Button
                       aria-controls="services-menu"
                       aria-haspopup="true"
                       // onMouseEnter={(e)=>handleClose(e)}
-                      onClick={()=>{router.push("/servicios")}}
+                      onClick={() => {
+                        router.push("/servicios");
+                      }}
                       sx={{
                         color: "#14213d",
                         padding: "0.7em",
@@ -118,6 +130,7 @@ const NavBar = () => {
                     >
                       {page.toUpperCase()}
                     </Button>
+                    <SiArchiveofourown/>
                     <Menu
                       id="services-menu"
                       anchorEl={anchorEl}
@@ -132,7 +145,7 @@ const NavBar = () => {
                       {services.map((service) => (
                         <MenuItem
                           key={service}
-                          onClick={()=>handleClose()}
+                          onClick={() => handleClose()}
                           sx={{
                             textDecoration: "none",
                             "&:hover": {
@@ -141,28 +154,30 @@ const NavBar = () => {
                             },
                           }}
                         >
-                          <Link                           sx={{
-                            textDecoration: "none",
-                            "&:hover": {
-                              backgroundColor: "black",
-                              color: "white",
-                            },
-                          }} href={`/servicios/${service.toLowerCase().replace(/\s+/g, '-').replace("ñ", "n")}`}>
+                          <Link
+                            sx={{
+                              textDecoration: "none",
+                              "&:hover": {
+                                backgroundColor: "black",
+                                color: "white",
+                              },
+                            }}
+                            href={`/servicios/${service
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")
+                              .replace("ñ", "n")}`}
+                          >
                             {service}
                           </Link>
                         </MenuItem>
                       ))}
                     </Menu>
                   </div>
-                ):
-
-
-
-                <Link
-                href={`/${page.toLowerCase()}`}>
-                  {page.toUpperCase()}
-                  
-                </Link>}
+                ) : (
+                  <Link href={`/${page.toLowerCase()}`}>
+                    {page.toUpperCase()}
+                  </Link>
+                )}
               </Typography>
             ))}
           </Box>

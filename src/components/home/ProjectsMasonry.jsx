@@ -69,6 +69,16 @@ const ImageItem = styled(Paper)(({ theme }) => ({
 export default function ProjectsMasonry() {
   return (
     <Box sx={{ width: '100%', minHeight: 500 }}>
+                  <Box
+            sx={{
+                backgroundColor: "#eee",
+                display: "flex",
+                justifyContent: "center",
+                width: "auto",
+                textAlign: "center",
+                marginBottom: "2.5em"
+            }}
+            >
       <Typography variant='h4' sx={{display:{xs: "flex", md: "none"}, flexDirection: "column"}} style={{padding: "1em", fontWeight: 500, textAlign: "center"}}>
       <span style={{color: mainTheme.palette.primary.main,margin: "0 0.6em"}}>INNOVACIÓN</span> 
       <span style={{color: mainTheme.palette.secondary.dark,margin: "0 0.6em"}}> DISEÑO </span>
@@ -79,6 +89,7 @@ export default function ProjectsMasonry() {
       <span style={{color: mainTheme.palette.secondary.dark,margin: "0 0.6em"}}> DISEÑO </span> ·
       <span style={{color: mainTheme.palette.primary.main, margin: "0 0.6em"}}>  IDEAS </span>
         </Typography>
+        </Box>
       <Masonry columns={{ xs: 2, sm: 3 }} spacing={2} defaultHeight={450} defaultColumns={4} defaultSpacing={1}>
         {images.map((image, index) => (
           <ImageItem key={index} sx={{ height: image.height }}>

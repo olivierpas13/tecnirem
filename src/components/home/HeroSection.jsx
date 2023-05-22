@@ -37,7 +37,7 @@ const HeroSection = () => {
             alt="Tecnirem Logo"
           />
 
-            <Typography sx={{display: "flex", fontWeight: "500",}} variant="h5" >
+            <Typography sx={{display: "flex", fontWeight: "500",color: "#eee", textShadow: "black 2px 2px", letterSpacing: "1px"}} variant="h5" >
                 Adecuación y Remodelación de Ambientes
             </Typography>
             <Button style={{marginTop: "2em"}}variant="contained" color="primary">
@@ -65,7 +65,7 @@ const HeroSection = () => {
             alt="Tecnirem Logo"
           />
 
-            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee", textShadow: "black 0px"}} variant="h5" >
+            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee", textShadow: "black 1px 1px", letterSpacing: "1px"}} variant="h5" >
               Renovamos tus ideas
             </Typography>
             <Button style={{marginTop: "2em"}}variant="contained" color="primary">

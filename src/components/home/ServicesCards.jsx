@@ -3,7 +3,7 @@ import CardComponent from "../cards/Card";
 
 const ServicesCards = () => {
   return (
-    <Grid container spacing={6} md={12} sx={{padding: "5em", marginBottom: "3em" }}>
+    <Grid container spacing={6} sx={{padding: "5em", marginBottom: "3em" }}>
       <Grid item md={4} >
         <CardComponent
           title={"Diseños de Interiores"}
@@ -15,7 +15,7 @@ const ServicesCards = () => {
       <Grid item md={4} >
         <CardComponent
           title={"Adecuación de Espacios"}
-          imageSrc={"/ad1.jpg"}
+          imageSrc={"/home/tec25.jpg"}
           buttonText={"Más información"}
         />
       </Grid>
