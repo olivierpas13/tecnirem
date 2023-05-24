@@ -47,6 +47,7 @@ const RightCarouselSection = ({ title, description, imageSrcs, buttontext, bigDe
             {imageSrcs.map(image=>{
                 return(
                     <Box
+                    key={image}
                     sx={{
                       display: "flex",
                       flexDirection: "column",

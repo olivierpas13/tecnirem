@@ -22,6 +22,7 @@ const LeftCarouselSection = ({ title, description, imageSrcs, buttontext, bigDes
             {imageSrcs.map(image=>{
                 return(
                     <Box
+                    key={image}
                     sx={{
                       display: "flex",
                       flexDirection: "column",
