@@ -156,7 +156,7 @@ const NavBar = () => {
                         >
                           {services.map((service) => {
                             return (
-                              <ListItem disablePadding>
+                              <ListItem key={service} disablePadding>
                                 <ListItemButton
                                   onClick={() =>
                                     router.push(
