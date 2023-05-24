@@ -10,43 +10,43 @@ import { mainTheme } from '@/utils/Pallete';
 
 const images = [
   {
-    src: '/masonry/checked1.png',
+    src: '/static/masonry/checked1.png',
     alt: 'Image 1',
     width: 150,
     height: 300,
   },
   {
-    src: '/masonry/checked2.png',
+    src: '/static/masonry/checked2.png',
     alt: 'Image 2',
     width: 150,
     height: 350,
   },
   {
-    src: '/masonry/checked3.png',
+    src: '/static/masonry/checked3.png',
     alt: 'Image 3',
     width: 150,
     height: 200,
   },
   {
-    src: '/masonry/checked4.png',
+    src: '/static/masonry/checked4.png',
     alt: 'Image 4',
     width: 150,
     height: 250,
   },
   {
-    src: '/masonry/checked5.png',
+    src: '/static/masonry/checked5.png',
     alt: 'Image 5',
     width: 150,
     height: 300,
   },
   {
-    src: '/masonry/checked6.png',
+    src: '/static/masonry/checked6.png',
     alt: 'Image 6',
     width: 150,
     height: 300,
   },
   {
-    src: '/masonry/checked7.png',
+    src: '/static/masonry/checked7.png',
     alt: 'Image 7',
     width: 150,
     height: 240,

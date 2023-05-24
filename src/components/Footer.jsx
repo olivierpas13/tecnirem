@@ -27,7 +27,7 @@ const Footer = () => {
             width={180}
             height={30}
             alt="Logo de TecniRem"
-            src={"/tecnirem-logo.svg"}
+            src={"/static/logos/tecnirem-logo.svg"}
             />
              <Box sx={{width: "5em", height: "1em"}} >
             </Box>

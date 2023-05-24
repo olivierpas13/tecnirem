@@ -14,7 +14,7 @@ const About = () => {
           }}
         >
           <Image
-            src="/bg-about-dark.jpg"
+            src="/static/about/bg-about-dark.jpg"
             alt="Hero Image"
             fill
             quality={100}

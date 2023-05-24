@@ -7,7 +7,7 @@ const ServicesCards = () => {
       <Grid item md={4} >
         <CardComponent
           title={"Diseños de Interiores"}
-          imageSrc={"/di1.jpg"}
+          imageSrc={"/static/home/di1.jpg"}
           buttonText={"Más información"}
           buttonDestination={"/servicios/diseño"}
         />
@@ -15,7 +15,7 @@ const ServicesCards = () => {
       <Grid item md={4} >
         <CardComponent
           title={"Adecuación de Espacios"}
-          imageSrc={"/home/tec25.jpg"}
+          imageSrc={"/static/home/tec25.jpg"}
           buttonText={"Más información"}
         />
       </Grid>
@@ -24,7 +24,7 @@ const ServicesCards = () => {
           title={
             "Remodelación de oficinas modernas, consultorios y locales comerciales"
           }
-          imageSrc={"/rem1.jpg"}
+          imageSrc={"/static/home/rem1.jpg"}
           buttonText={"Más información"}
         />
       </Grid>

@@ -47,7 +47,7 @@ const NavBar = () => {
             >
               <Image
                 fill
-                src="/tecnirem-logo-dark.svg"
+                src="/static/logos/tecnirem-logo-dark.svg"
                 quality={100}
                 alt="Tecnirem Logo"
               />

@@ -21,7 +21,7 @@ const HeroSection = () => {
               height: "90vh",
               justifyContent: "center",
               alignItems: "center",
-              backgroundImage: "url(/bg-tecnirem.webp)",
+              backgroundImage: "url(/static/home/bg-tecnirem.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
@@ -29,7 +29,7 @@ const HeroSection = () => {
             <Image
               width={400}
               height={150}
-              src="/tecnirem-logo-dark.svg"
+              src="/static/home/tecnirem-logo-dark.svg"
               quality={100}
               alt="Tecnirem Logo"
             />
@@ -62,7 +62,7 @@ const HeroSection = () => {
               height: "90vh",
               justifyContent: "center",
               alignItems: "center",
-              backgroundImage: "url(/bg-tecnirem2.jpg)",
+              backgroundImage: "url(/static/home/bg-tecnirem2.jpg)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}
@@ -70,7 +70,7 @@ const HeroSection = () => {
             <Image
               width={400}
               height={150}
-              src="/tecnirem-logo-dark.svg"
+              src="/static/home/tecnirem-logo-dark.svg"
               quality={100}
               alt="Tecnirem Logo"
             />
