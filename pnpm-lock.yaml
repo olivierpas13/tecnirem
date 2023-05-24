@@ -2,19 +2,19 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@emotion/react':
-    specifier: ^11.10.6
+    specifier: 11.10.6
     version: 11.10.6(react@18.2.0)
   '@emotion/styled':
-    specifier: ^11.10.6
+    specifier: 11.10.6
     version: 11.10.6(@emotion/react@11.10.6)(react@18.2.0)
   '@fontsource/roboto':
-    specifier: ^4.5.8
+    specifier: 4.5.8
     version: 4.5.8
   '@mui/lab':
     specifier: 5.0.0-alpha.127
     version: 5.0.0-alpha.127(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@mui/material@5.12.1)(react-dom@18.2.0)(react@18.2.0)
   '@mui/material':
-    specifier: ^5.12.1
+    specifier: 5.12.1
     version: 5.12.1(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(react-dom@18.2.0)(react@18.2.0)
   eslint:
     specifier: 8.38.0
@@ -32,13 +32,13 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-icons:
-    specifier: ^4.8.0
+    specifier: 4.8.0
     version: 4.8.0(react@18.2.0)
   react-intersection-observer:
-    specifier: ^9.4.3
+    specifier: 9.4.3
     version: 9.4.3(react@18.2.0)
   react-material-ui-carousel:
-    specifier: ^3.4.2
+    specifier: 3.4.2
     version: 3.4.2(@emotion/react@11.10.6)(@emotion/styled@11.10.6)(@mui/icons-material@5.11.16)(@mui/material@5.12.1)(@mui/system@5.12.1)(react-dom@18.2.0)(react@18.2.0)
   styled-components:
     specifier: 6.0.0-rc.1

@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 
 const HeroSection = () => {
-
   return (
     <Box sx={{ paddingTop: "64px" }}>
       <Box
@@ -14,9 +13,7 @@ const HeroSection = () => {
           overflow: "hidden",
         }}
       >
-        <Carousel
-        interval={3500}
-        >
+        <Carousel interval={3500}>
           <Box
             sx={{
               display: "flex",
@@ -29,18 +26,31 @@ const HeroSection = () => {
               backgroundPosition: "center center",
             }}
           >
-          <Image
-            width={400}
-            height={150}
-            src="/tecnirem-logo-dark.svg"
-            quality={100}
-            alt="Tecnirem Logo"
-          />
+            <Image
+              width={400}
+              height={150}
+              src="/tecnirem-logo-dark.svg"
+              quality={100}
+              alt="Tecnirem Logo"
+            />
 
-            <Typography sx={{display: "flex", fontWeight: "500",color: "#eee", textShadow: "black 2px 2px", letterSpacing: "1px"}} variant="h5" >
-                Adecuación y Remodelación de Ambientes
+            <Typography
+              sx={{
+                display: "flex",
+                fontWeight: "500",
+                color: "#eee",
+                textShadow: "black 2px 2px",
+                letterSpacing: "1px",
+              }}
+              variant="h5"
+            >
+              Adecuación y Remodelación de Ambientes
             </Typography>
-            <Button style={{marginTop: "2em"}}variant="contained" color="primary">
+            <Button
+              style={{ marginTop: "2em" }}
+              variant="contained"
+              color="primary"
+            >
               Contáctanos
             </Button>
           </Box>
@@ -57,21 +67,34 @@ const HeroSection = () => {
               backgroundPosition: "center center",
             }}
           >
-          <Image
-            width={400}
-            height={150}
-            src="/tecnirem-logo-dark.svg"
-            quality={100}
-            alt="Tecnirem Logo"
-          />
+            <Image
+              width={400}
+              height={150}
+              src="/tecnirem-logo-dark.svg"
+              quality={100}
+              alt="Tecnirem Logo"
+            />
 
-            <Typography sx={{display: "flex", fontWeight: "500", color: "#eee", textShadow: "black 1px 1px", letterSpacing: "1px"}} variant="h5" >
+            <Typography
+              sx={{
+                display: "flex",
+                fontWeight: "500",
+                color: "#eee",
+                textShadow: "black 1px 1px",
+                letterSpacing: "1px",
+              }}
+              variant="h5"
+            >
               Renovamos tus ideas
             </Typography>
-            <Button style={{marginTop: "2em"}}variant="contained" color="primary">
+            <Button
+              style={{ marginTop: "2em" }}
+              variant="contained"
+              color="primary"
+            >
               Contáctanos
             </Button>
-            </Box>        
+          </Box>
         </Carousel>
       </Box>
     </Box>
