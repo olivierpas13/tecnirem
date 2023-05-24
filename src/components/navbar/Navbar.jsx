@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 import AppBar from "@mui/material/AppBar";
@@ -7,82 +8,92 @@ import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import MobileNavbar from "./MobileNavbar";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Button from "@mui/material/Button";
 
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const pages = ["Servicios", "Estilos", "Contacto"];
-const services = ["Adecuacion de espacios", "Diseño", "Remodelacion"]; // Add your services here
+const services = ["Adecuacion de espacios", "Diseño", "Remodelacion"];
 
 const NavBar = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
-  const menuStyles = {
-    a:{
-      textDecoration: "none",
-      backgroundColor: "red"
-    }
-  }
+  const router = useRouter();
+
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
-      <AppBar
-        sx={{ display: { xs: "none", md: "flex" } }}
-        position="fixed"
-        color="tertiary"
-      >
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <Box
-              sx={{ display: { xs: "none", md: "flex", marginRight: "2em" } }}
+    <AppBar
+      sx={{ display: { xs: "none", md: "flex" } }}
+      position="fixed"
+      color="tertiary"
+    >
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box sx={{ display: { xs: "none", md: "flex", marginRight: "2em" } }}>
+            <Link
+              style={{
+                display: "block",
+                position: "relative",
+                width: "200px",
+                height: "60px",
+                marginRight: "1em",
+              }}
+              href="/"
+              passHref
             >
-              <Link
-                style={{
-                  display: "block",
-                  position: "relative",
-                  width: "200px",
-                  height: "60px",
-                  marginRight: "1em",
-                }}
-                href="/"
-                passHref
-              >
-                <Image
-                  fill
-                  src="/tecnirem-logo-dark.svg"
-                  quality={100}
-                  alt="Tecnirem Logo"
-                />
-              </Link>
-            </Box>
-            <Box sx={{ flexGrow: 1 }} />
-            <Box
+              <Image
+                fill
+                src="/tecnirem-logo-dark.svg"
+                quality={100}
+                alt="Tecnirem Logo"
+              />
+            </Link>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box
+            sx={{
+              display: {
+                xs: "none",
+                md: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginRight: "2em",
+              },
+            }}
+          >
+            <Typography
               sx={{
-                display: {
-                  xs: "none",
-                  md: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  marginRight: "2em",
+                mr: 4,
+                display: "block",
+                "& a": {
+                  color: "#14213d",
+                  padding: "0.7em",
+                  borderRadius: "0.9em",
+                  textDecoration: "none",
+                  "&:hover": {
+                    color: "#eee",
+                    backgroundColor: "#14213d",
+                    transition: "background-color 0.3s",
+                  },
                 },
               }}
             >
+              <Link href={"/quienes-somos"}>QUIENES SOMOS</Link>
+            </Typography>
+            {pages.map((page) => (
               <Typography
+                key={page}
                 sx={{
                   mr: 4,
                   display: "block",
                   "& a": {
                     color: "#14213d",
                     padding: "0.7em",
-                    borderRadius: "0.9em",
+                    borderRadius: "0.7em",
                     textDecoration: "none",
                     "&:hover": {
                       color: "#eee",
@@ -92,123 +103,90 @@ const NavBar = () => {
                   },
                 }}
               >
-                <Link href={"/quienes-somos"}>QUIENES SOMOS</Link>
-              </Typography>
-              {pages.map((page) => (
-                <Typography
-                  key={page}
-                  sx={{
-                    mr: 4,
-                    display: "block",
-                    "& a": {
-                      color: "#14213d",
-                      padding: "0.7em",
-                      borderRadius: "0.7em",
-                      textDecoration: "none",
-                      "&:hover": {
-                        color: "#eee",
-                        backgroundColor: "#14213d",
-                        transition: "background-color 0.3s",
-                      },
-                    },
-                  }}
-                >
-                  {page === "Servicios" ? (
-                    <Box
+                {page === "Servicios" ? (
+                  <>
+                    <Button
+                      id="menu-btn"
                       sx={{
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
+                        color: "#14213d",
+                        borderRadius: "1em",
+                        "&:hover": {
+                          color: "#eee",
+                          backgroundColor: "#14213d",
+                          transition: "background-color 0.3s",
+                        },
                       }}
+                      onMouseOver={() => setShowMenu(true)}
+                      onMouseLeave={() => setShowMenu(false)}
                     >
                       <Typography
                         sx={{
                           display: "block",
-                          "& a": {
-                            color: "#14213d",
-                            padding: "0.7em",
-                            borderRadius: "0.9em",
-                            textDecoration: "none",
-                            "&:hover": {
-                              color: "#eee",
-                              backgroundColor: "#14213d",
-                              transition: "background-color 0.3s",
-                            },
+                          padding: "0.7em",
+                          borderRadius: "0.9em",
+                          textDecoration: "none",
+                          "&:hover": {
+                            color: "#eee",
                           },
                         }}
                       >
-                        <Link href={page.toLowerCase()}>{page.toUpperCase()}</Link>
+                        {page.toUpperCase()}
                       </Typography>
+                      <MdKeyboardArrowDown size={20} />
+                    </Button>
+                    {showMenu && (
                       <Box
                         sx={{
-                          borderRadius: "10em",
-                          height: "auto",
-                          width: "auto",
-                          justifyContent: "center",
+                          position: "absolute",
                           display: "flex",
-                          padding: 0,
-                          "&:hover": {
-                            backgroundColor: "#eee",
-                          },
+                          backgroundColor: "#fff",
+                          borderRadius: "0.3em",
                         }}
+                        onMouseOver={() => setShowMenu(true)}
+                        onMouseLeave={() => setShowMenu(false)}
                       >
-                        <MdKeyboardArrowDown
-                          size={20}
-                          onClick={handleClick}
-                        />
-                      </Box>
-                      <Menu
-                        onMouseLeave={handleClose}
-                        id="basic-menu"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                          vertical: 'bottom',
-                          horizontal: 'center',
-                        }}
-                        transformOrigin={{
-                          vertical: 'top',
-                          horizontal: 'center',
-                        }}
-                      >
-                        {services.map((service) => (
-                          <MenuItem
-                            key={service}
-                            onClick={() => setShowMenu(false)}
-                            >
-                            {/* <Link
-                            className="menu-item"
-                              style={{
-                                textDecoration: "none",
-                                a:{
-                                  "&:hover":{
-                                    backgroundColor: "purple",
+                        <List
+                          sx={{
+                            padding: "0.2em",
+                            width: "max",
+                          }}
+                        >
+                          {services.map((service) => {
+                            return (
+                              <ListItem disablePadding>
+                                <ListItemButton
+                                  onClick={() =>
+                                    router.push(
+                                      `/servicios/${service
+                                        .replace(/ñ/g, "n")
+                                        .replace(/ /g, "-")
+                                        .toLowerCase()}`
+                                    )
                                   }
-                                }
-                              }}
-                              href={`/servicios/${service
-                                .toLowerCase()
-                                .replace(/\s+/g, "-")
-                                .replace("ñ", "n")}`}
-                            > */}
-                              {service}
-                            {/* </Link> */}
-                          </MenuItem>
-                        ))}
-                      </Menu>
-                    </Box>
-                  ) : (
-                    <Link href={`/${page.toLowerCase()}`}>
-                      {page.toUpperCase()}
-                    </Link>
-                  )}
-                </Typography>
-              ))}
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+                                >
+                                  <ListItemText primary={service} />
+                                </ListItemButton>
+                              </ListItem>
+                            );
+                          })}
+                        </List>
+                      </Box>
+                    )}{" "}
+                  </>
+                ) : (
+                  <Link href={`/${page.toLowerCase()}`}>
+                    {page.toUpperCase()}
+                  </Link>
+                )}
+              </Typography>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
 export default NavBar;
