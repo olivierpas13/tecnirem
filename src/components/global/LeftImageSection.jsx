@@ -18,7 +18,7 @@ const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescrip
         xs={1}
         md={7}
       ></Grid>
-      <Grid style={{ padding: "4em" }} item xs={1} md={5}>
+      <Grid style={{margin: "auto", padding: "4em" }} item xs={1} md={5}>
         <Typography
           variant="h4"
           sx={{
@@ -31,7 +31,7 @@ const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescrip
           {title}
         </Typography>
         <Typography
-          variant= {bigDescription? "h6": "subtitle2"}
+          variant= {bigDescription? "h5": "subtitle2"}
           sx={{ fontWeight: 300, lineHeight: 2.5 }}
         >
           {description}

@@ -20,7 +20,7 @@ const RightImageSection = ({ title, description, imageUrl, buttontext, bigDescri
           {title}
         </Typography>
         <Typography
-          variant= {bigDescription? "h6": "subtitle2"}
+          variant= {bigDescription? "h5": "subtitle2"}
           sx={{ fontWeight: 300, lineHeight: 2.5 }}
         >
           {description}
