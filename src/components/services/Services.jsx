@@ -40,16 +40,6 @@ const Services = () => {
       buttonText: "Conoce el proceso",
     },
   ];
-
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const currentSection = sections[currentIndex];
-  const isRightCarousel = currentIndex % 2 === 0;
-
-  const handleCarouselSwitch = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % sections.length);
-  };
-
   return (
     <Container
       maxWidth={false}
