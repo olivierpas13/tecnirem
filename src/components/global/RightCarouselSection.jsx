@@ -22,7 +22,7 @@ const RightCarouselSection = ({ title, description, imageSrcs, buttontext, bigDe
           {title}
         </Typography>
         <Typography
-          variant= {bigDescription? "subtitle1": "subtitle2"}
+          variant= {bigDescription? "h5": "subtitle2"}
           sx={{ fontWeight: 300, lineHeight: 2.5 }}
         >
           {description}

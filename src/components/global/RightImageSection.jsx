@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 const RightImageSection = ({ title, description, imageUrl, buttontext, bigDescription, buttonColor }) => {
   return (
     <>
-      <Grid style={{ padding: "4em" }} item xs={1} md={7}>
+      <Grid style={{margin: "auto", padding: "4em" }} item xs={1} md={6}>
         <Typography
           variant="h4"
           sx={{
@@ -41,7 +41,7 @@ const RightImageSection = ({ title, description, imageUrl, buttontext, bigDescri
         }}
         item
         xs={1}
-        md={5}
+        md={6}
       ></Grid>
     </>
   );

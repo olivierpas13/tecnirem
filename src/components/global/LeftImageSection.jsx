@@ -16,9 +16,9 @@ const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescrip
         }}
         item
         xs={1}
-        md={7}
+        md={6}
       ></Grid>
-      <Grid style={{margin: "auto", padding: "4em" }} item xs={1} md={5}>
+      <Grid style={{margin: "auto", padding: "4em" }} item xs={1} md={6}>
         <Typography
           variant="h4"
           sx={{
