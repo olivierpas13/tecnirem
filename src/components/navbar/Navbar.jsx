@@ -17,7 +17,7 @@ import Button from "@mui/material/Button";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const pages = ["Servicios", "Estilos", "Contacto"];
-const services = ["Diseño de espacios", "Adecuacion de espacios", "Remodelacion de oficinas"];
+const services = ["Diseño de espacios", "Adecuación de espacios", "Remodelación de oficinas"];
 
 const NavBar = () => {
 
@@ -107,6 +107,7 @@ const NavBar = () => {
                   <>
                     <Button
                       id="menu-btn"
+                      size="small"
                       sx={{
                         display: "flex",
                         justifyContent: "center",
@@ -157,17 +158,19 @@ const NavBar = () => {
                           {services.map((service) => {
                             return (
                               <ListItem key={service} disablePadding>
+
                                 <ListItemButton
                                   onClick={() =>
                                     router.push(
                                       `/servicios/${service
                                         .replace(/ñ/g, "n")
                                         .replace(/ /g, "-")
-                                        .toLowerCase()}`
+                                        .toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                                      }`
                                     )
                                   }
                                 >
-                                  <ListItemText primary={service} />
+<ListItemText primary={service} />
                                 </ListItemButton>
                               </ListItem>
                             );

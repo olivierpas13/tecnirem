@@ -8,7 +8,7 @@ const Adecuacion = () => {
       "/static/services/adecuacion/tec7.jpg",
     ],
     mainText:
-      "Si estás buscando realizar cambios menores y ajustes en un espacio existente, para adaptarlo a nuevas necesidades o funciones, nuestro servicio de adecuación de espacios es lo que necesita. Este proceso es menos complejo y menos costoso que una remodelación completa, ya que no implica grandes cambios estructurales o de diseño.",
+      "Si estás buscando realizar cambios menores y ajustes en un espacio existente, para adaptarlo a nuevas necesidades o funciones, nuestro servicio de adecuación de espacios es lo que necesitas. Este proceso es menos complejo y menos costoso que una remodelación completa, ya que no implica grandes cambios estructurales o de diseño.",
     subtitle: "Nuestros Servicios",
     sections: [
       {

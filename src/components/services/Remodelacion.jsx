@@ -21,7 +21,7 @@ const Remodelacion = () => {
       {
         title: "2. Sistema eléctrico y plano de iluminación",
         description:
-          "Elementos fundamentales para garantizar un entorno de trabajo seguro, funcional y bien iluminado.",
+          "Son elementos fundamentales para garantizar un entorno de trabajo seguro, funcional y bien iluminado.",
           imageUrl: "/static/services/remodelacion/tec14.jpg",
         orientation: "right",
       },
@@ -35,14 +35,14 @@ const Remodelacion = () => {
       {
         title: "4. Sistema de construcción livianos",
         description:
-          "Excelente opción por su versatilidad, facilidad de instalación y menor carga estructural, como paredes y tumbados de gypsum – drywall, paneles de madera y aluminio compuesto, etc.",
+          "Es una excelente opción por su versatilidad, facilidad de instalación y menor carga estructural, como paredes y tumbados de gypsum – drywall, paneles de madera y aluminio compuesto, etc.",
           imageUrl: "/static/services/remodelacion/tec16.jpg",
         orientation: "right",
       },
       {
         title: "5. Mamparas, puertas y ventanas de aluminio y vidrio",
         description:
-          "Elementos comunes utilizados en remodelaciones debido a su apariencia moderna, durabilidad y capacidad para maximizar la entrada de luz natural.",
+          "Son elementos comunes utilizados en remodelaciones debido a su apariencia moderna, durabilidad y capacidad para maximizar la entrada de luz natural.",
           imageUrl: "/static/services/remodelacion/tec36.jpg",
         orientation: "left",
       },
@@ -56,7 +56,7 @@ const Remodelacion = () => {
       {
         title: "7. Variedad de elementos decorativos",
         description:
-          "Desempeñan un parte fundamental para crear un ambiente atractivo y personalizado. Se debe asegurar que los elementos seleccionados se complementen entre sí y con el resto del diseño; pueden ser cortinas, persianas, alfombras, pisos flotantes, lámparas, plantas, ornamentales, etc.",
+          "Desempeñan un parte fundamental para crear un ambiente atractivo y personalizado. Se debe asegurar que los elementos seleccionados se complementen entre sí y con el resto del diseño; pueden ser cortinas, persianas, alfombras, pisos flotantes, lámparas, plantas ornamentales, etc.",
           imageUrl: "/static/services/remodelacion/tec19.webp",
         orientation: "left",
       },

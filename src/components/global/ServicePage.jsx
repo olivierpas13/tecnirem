@@ -36,10 +36,10 @@ const ServicePage = ({
               fontWeight: "600",
               textAlign: "center",
               margin: "0 auto",
-              letterSpacing: "0.1em",
+              letterSpacing: "0.05em",
             }}
           >
-            {mainTitle}
+            {mainTitle.toUpperCase()}
           </Typography>
         </Box>
       </Box>
@@ -65,22 +65,24 @@ const ServicePage = ({
             backgroundColor: "#eee",
             display: "inline-block",
             width: "100vw",
-            padding: "1.5em 20em",
+            padding: "0.5em 20em",
             borderRadius: "0.3em",
             margin: "0 auto",
           }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "600",
-              textAlign: "center",
-              letterSpacing: "0.3rem",
-              margin: "0 auto",
-            }}
-          >
-            {subtitle}
-          </Typography>
+                  <Typography
+          variant="h4"
+          sx={{
+            fontSize: "2.5em",
+            fontWeight: 700,
+            lineHeight: 1,
+            textAlign: "center",
+            my: "1em",
+            color: mainTheme.palette.primary.main,
+          }}
+        >
+          {subtitle}
+        </Typography>
         </Box>
       </Box>
       <Grid
@@ -102,10 +104,10 @@ const ServicePage = ({
         })}
         <Box
           sx={{
-            margin: "1em auto",
+            margin: "3em auto",
             backgroundColor: mainTheme.palette.primary.main,
             borderRadius: "5em",
-            padding: "0.6em",
+            padding: "0.2em",
             paddingX: "10em",
             color: "white",
             display: "flex",
@@ -118,6 +120,7 @@ const ServicePage = ({
               fontWeight: 600,
               letterSpacing: "0.1em",
               color: "#fff",
+              fontSize: "1.7em",
               padding: "1em",
             }}
             variant="h5"

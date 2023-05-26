@@ -4,17 +4,17 @@ const Diseño = () => {
   const diseño = {
     mainTitle: "Diseño de Espacios",
     carouselImgsSrcs: [
-      "/static/services/diseño/tec1.jpg",
       "/static/services/diseño/tec41.webp",
+      "/static/services/diseño/tec1.jpg",
     ],
     mainText:
-      "En nuestro servicio de diseño de espacios, trabajamos de la mano con nuestros clientes para transformar sus espacios comerciales en ambientes atractivos y funcionales. Nos especializamos en el diseño de oficinas modernas, locales e islas comerciales, con el objetivo de crear espacios únicos y a medida para cada cliente. Con nuestra amplia experiencia en el diseño de interiores, podemos ayudarlo a dar vida a su visión y crear un espacio que refleje la personalidad y el carácter de su negocio.",
+      "En nuestro servicio de diseño de espacios, trabajamos de la mano con nuestros clientes para transformar sus espacios comerciales en ambientes atractivos y funcionales. Nos especializamos en el diseño de oficinas modernas, consultorios y locales comerciales, con el objetivo de crear espacios únicos y a medida para cada cliente. Con nuestra amplia experiencia en el diseño de interiores, podemos ayudarlo a dar vida a su visión y crear un espacio que refleje la personalidad y el carácter de su negocio.",
     subtitle: "¿Cómo lo hacemos?",
     sections: [
       {
         title: "Análisis del espacio existente",
         description:
-          "Esto implica evaluar las características del espacio, incluyendo la distribución, la iluminación, los materiales de construcción y la altura del techo.",
+          "Esto implica evaluar las características del espacio, incluyendo la distribución, la iluminación, los materiales de construcción, altura del techo, etc.",
         imageUrl: "/static/services/diseño/tec2.jpg",
         orientation: "left",
       },
@@ -28,7 +28,7 @@ const Diseño = () => {
       {
         title: "Creación de un plan",
         description:
-          "En función del análisis del espacio existente y de las necesidades identificadas, se crea un plan que incluye el diseño del espacio, la selección de materiales, acabados y mobiliario, y un presupuesto estimado.",
+          "En función del análisis del espacio existente y de las necesidades identificadas, se crea un plan que incluye el diseño del espacio, la selección de materiales, acabados y mobiliario.",
           imageUrl: "/static/services/diseño/tec4.jpg",
           orientation: "left",
       },
@@ -47,7 +47,7 @@ const Diseño = () => {
           orientation: "left",
       },
     ],
-    callToActionText: "¡Contáctenos para comenzar su proyecto de diseño de espacios!",
+    callToActionText: "Nos ajustamos a tu presupuesto",
     callToActionBtn: "CONTÁCTANOS",
   };
 

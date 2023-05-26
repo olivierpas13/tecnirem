@@ -42,20 +42,32 @@ const About = () => {
         variant="h1"
         sx={{
           color: "#eee",
+          textShadow: "gray 1px 1px",
           fontSize: { xs: "4xl", sm: "5xl", md: "6xl" },
           fontWeight: 800,
-          my: "0.2em"
+          my: "0.5em"
         }}
-      >            Innovamos tus ideas
+      >            Renovamos tus ideas
           </Typography>
         </div>
-            <Typography color="#fff" variant="h5" component="p" gutterBottom>
+        <Typography
+              sx={{
+                display: "flex",
+                fontWeight: "500",
+                color: "#eee",
+                textShadow: "black 1px 1px",
+                letterSpacing: "1px",
+                my: "0.3em"
+              }}
+              variant="h4"
+
+            >
                 Somos un equipo de técnicos especialistas
                 en adecuaciones, remodelaciones y mantenimiento
-                de espacios.
-            </Typography>
-            <Button style={{marginTop: "1em"}}variant="contained" color="primary">
-              Conócenos
+                de espacios.            
+                </Typography>
+            <Button size='large' style={{marginTop: "1em"}}variant="contained" color="primary">
+              contáctanos
             </Button>
           </Box>
         </Box>
