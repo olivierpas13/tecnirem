@@ -56,7 +56,7 @@ const Styles = () => {
           },
         ],
         callToActionText:
-        "Nos ajustamos a tu presupuesto",
+        "Estamos listos para ayudarte",
       callToActionBtn: "CONTÁCTANOS",
       };
       

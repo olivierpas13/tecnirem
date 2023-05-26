@@ -47,7 +47,7 @@ const Adecuacion = () => {
           orientation: "left",
       },
     ],
-    callToActionText: "Nos ajustamos a tu presupuesto",
+    callToActionText: "Estamos listos para ayudarte",
     callToActionBtn: "CONTÁCTANOS",
   };
   return (
