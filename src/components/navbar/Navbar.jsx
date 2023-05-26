@@ -17,7 +17,7 @@ import Button from "@mui/material/Button";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const pages = ["Servicios", "Estilos", "Contacto"];
-const services = ["Diseño de espacios", "Adecuacion de espacios", "Remodelacion"];
+const services = ["Diseño de espacios", "Adecuacion de espacios", "Remodelacion de oficinas"];
 
 const NavBar = () => {
 

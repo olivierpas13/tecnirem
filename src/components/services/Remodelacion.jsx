@@ -1,104 +1,76 @@
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-
-import Image from "next/image";
-import Carousel from "react-material-ui-carousel";
-
-import { mainTheme } from "@/utils/Pallete";
-import RightImageSection from "../global/RightImageSection";
-
+import ServicePage from "../global/ServicePage";
 const Remodelacion = () => {
-  return (
-    <Box sx={{ paddingTop: "64px" }}>
-      <Box sx={{ display: "flex" }}>
-        <Box
-          sx={{
-            backgroundColor: "#eee",
-            display: "inline-block",
-            padding: "1.5em 7em",
-            borderRadius: "0.3em",
-            margin: "0 auto",
-          }}
-        >
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: "500", textAlign: "center", margin: "0 auto" }}
-          >
-            Remodelación de Oficinas Modernas, Consultorios y Locales
-            Comerciales{" "}
-          </Typography>
-        </Box>
-      </Box>
-      {/* <Grid
-        container
-        columns={{ xs: 1, md: 12 }}
-        spacing={2}
-        sx={{
-          display: { xs: "none", md: "flex" },
-          height: "100%",
-          marginTop: "1%",
-        }}
-      >
-        <RightImageSection
-          bigDescription={true}
-          description={
-            "Si está buscando realizar cambios menores y ajustes en un espacio existente, para adaptarlo a nuevas necesidades o funciones, nuestro servicio de adecuación de espacio es lo que necesita. Este proceso es menos complejo y menos costoso que una remodelación completa, ya que no implica grandes cambios estructurales o de diseño. "
-          }
-          imageUrl={"/diseño.webp"}
-        />
-      </Grid> */}
-      <Box
-        sx={{
-          height: "100%",
-          margin: "auto",
-          width: "70%",
-          padding: "5em",
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: 500,
-            lineHeight: 1.4,
-            my: "1em",
-            textAlign: "center",
-            color: mainTheme.palette.primary.main,
-          }}
-        >
-          Estos son algunos servicios que contemplan nuestros procesos de
-          renovación:
-        </Typography>
-        <Carousel navButtonsAlwaysVisible={true}>
-          <Box sx={{ height: "50vh", width: "70%", padding: "5em" }}>
-            <Image fill alt="Imágen" src={"/diseño.webp"} />
-            <Typography
-              variant="h5"
-              sx={{
-                position: "relative",
-                fontWeight: 500,
-                // lineHeight: 1.4,
-                my: "1em",
-                left: 0,
-                bottom: 0,
-              }}
-            >
-              Diseño de interiores
-            </Typography>
-          </Box>
-          <Box sx={{ height: "50vh", width: "70%", padding: "5em" }}>
-            <Image fill alt="Imágen" src={"/diseño.webp"} />
-          </Box>
-          <Box sx={{ height: "50vh", width: "70%", padding: "5em" }}>
-            <Image fill alt="Imágen" src={"/diseño.webp"} />
-          </Box>
-          <Box sx={{ height: "50vh", width: "70%", padding: "5em" }}>
-            <Image fill alt="Imágen" src={"/diseño.webp"} />
-          </Box>
-        </Carousel>
-      </Box>
-    </Box>
-  );
+
+  const remodelacion = {
+    mainTitle: "Remodelación de Oficinas Modernas, Consultorios y Locales Comerciales",
+    carouselImgsSrcs: [
+      "/static/services/remodelacion/tec13.jpg",
+      "/static/services/remodelacion/tec28.webp",
+    ],
+    mainText:
+      "En nuestro servicio de remodelación, trabajamos de la mano con nuestros clientes para transformar sus espacios comerciales en ambientes atractivos y funcionales. Nos especializamos en la remodelación de oficinas modernas, consultorios y locales comerciales, con el objetivo de crear espacios únicos y personalizados que se adapten a las necesidades y deseos específicos de los usuarios.",
+    subtitle: "Nuestros Servicios",
+    sections: [
+      {
+        title: "1. Diseño - Distribución de ambientes",
+        description:
+          "Cada proyecto requiere un enfoque único y personalizado, adaptado a las necesidades y deseos específicos de los usuarios y al contexto en el que se encuentra el espacio.",
+          imageUrl: "/static/services/remodelacion/tec42.webp",
+        orientation: "left",
+      },
+      {
+        title: "2. Sistema eléctrico y plano de iluminación",
+        description:
+          "Elementos fundamentales para garantizar un entorno de trabajo seguro, funcional y bien iluminado.",
+          imageUrl: "/static/services/remodelacion/tec14.jpg",
+        orientation: "right",
+      },
+      {
+        title: "3. Sistema de voz y datos",
+        description:
+          "Es crucial considerar los sistemas de voz y datos para asegurar una infraestructura de comunicaciones eficiente.",
+          imageUrl: "/static/services/remodelacion/tec35.jpg",
+        orientation: "left",
+      },
+      {
+        title: "4. Sistema de construcción livianos",
+        description:
+          "Excelente opción por su versatilidad, facilidad de instalación y menor carga estructural, como paredes y tumbados de gypsum – drywall, paneles de madera y aluminio compuesto, etc.",
+          imageUrl: "/static/services/remodelacion/tec16.jpg",
+        orientation: "right",
+      },
+      {
+        title: "5. Mamparas, puertas y ventanas de aluminio y vidrio",
+        description:
+          "Elementos comunes utilizados en remodelaciones debido a su apariencia moderna, durabilidad y capacidad para maximizar la entrada de luz natural.",
+          imageUrl: "/static/services/remodelacion/tec36.jpg",
+        orientation: "left",
+      },
+      {
+        title: "6. Mobiliario para cada necesidad",
+        description:
+          "El mobiliario juega un papel importante para satisfacer las necesidades de cada espacio; pueden ser sillas, mesas, counters, puestos de trabajo, armarios, repisas, sofás, paneles divisorios, etc.",
+          imageUrl: "/static/services/remodelacion/tec18.jpg",
+        orientation: "right",
+      },
+      {
+        title: "7. Variedad de elementos decorativos",
+        description:
+          "Desempeñan un parte fundamental para crear un ambiente atractivo y personalizado. Se debe asegurar que los elementos seleccionados se complementen entre sí y con el resto del diseño; pueden ser cortinas, persianas, alfombras, pisos flotantes, lámparas, plantas, ornamentales, etc.",
+          imageUrl: "/static/services/remodelacion/tec19.webp",
+        orientation: "left",
+      },
+    ],
+    callToActionText:
+      "Nos ajustamos a tu presupuesto",
+    callToActionBtn: "CONTÁCTANOS",
+  };
+
+  return(
+    <ServicePage
+      {...remodelacion}
+    />
+  )
 };
 
 export default Remodelacion;

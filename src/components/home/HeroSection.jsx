@@ -42,7 +42,7 @@ const HeroSection = () => {
                 textShadow: "black 2px 2px",
                 letterSpacing: "1px",
               }}
-              variant="h5"
+              variant="h4"
             >
               Adecuación y Remodelación de Ambientes
             </Typography>
@@ -83,7 +83,7 @@ const HeroSection = () => {
                 textShadow: "black 1px 1px",
                 letterSpacing: "1px",
               }}
-              variant="h5"
+              variant="h4"
             >
               Renovamos tus ideas
             </Typography>

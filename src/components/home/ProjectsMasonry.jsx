@@ -10,47 +10,55 @@ import { mainTheme } from '@/utils/Pallete';
 
 const images = [
   {
-    src: '/static/masonry/checked1.png',
-    alt: 'Image 1',
-    width: 150,
-    height: 300,
-  },
-  {
-    src: '/static/masonry/checked2.png',
+    src: '/static/masonry/rem2.jpg',
     alt: 'Image 2',
-    width: 150,
-    height: 350,
+    width: 400,
+    height: 600,
   },
   {
-    src: '/static/masonry/checked3.png',
-    alt: 'Image 3',
-    width: 150,
-    height: 200,
+    src: '/static/masonry/tec26.webp',
+    alt: 'Image 8',
+    width: 400,
+    height: 400,
   },
   {
-    src: '/static/masonry/checked4.png',
-    alt: 'Image 4',
-    width: 150,
-    height: 250,
-  },
-  {
-    src: '/static/masonry/checked5.png',
+    src: '/static/masonry/tec22.jpg',
     alt: 'Image 5',
-    width: 150,
-    height: 300,
+    width: 550,
+    height: 450,
   },
   {
-    src: '/static/masonry/checked6.png',
+    src: '/static/masonry/tec40.webp',
     alt: 'Image 6',
-    width: 150,
-    height: 300,
+    width: 400,
+    height: 400,
   },
   {
     src: '/static/masonry/checked7.png',
     alt: 'Image 7',
-    width: 150,
-    height: 240,
+    width: 450,
+    height: 350,
   },
+
+  {
+    src: '/static/masonry/tec27.jpg',
+    alt: 'Image 9',
+    width: 400,
+    height: 600,
+  },
+  {
+    src: '/static/masonry/checked1.png',
+    alt: 'Image 1',
+    width: 450,
+    height: 350,
+  },
+  {
+    src: '/static/masonry/est2.jpg',
+    alt: 'Image 4',
+    width: 450,
+    height: 400,
+  },
+
 ];
 
 const ImageItem = styled(Paper)(({ theme }) => ({

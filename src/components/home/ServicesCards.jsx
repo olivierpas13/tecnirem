@@ -6,7 +6,7 @@ const ServicesCards = () => {
     <Grid container spacing={6} sx={{padding: "5em", marginBottom: "3em" }}>
       <Grid item md={4} >
         <CardComponent
-          title={"Diseños de Interiores"}
+          title={"Diseños de Espacios"}
           imageSrc={"/static/home/diseno.JPG"}
           buttonText={"Más información"}
           buttonDestination={"/servicios/diseno"}
