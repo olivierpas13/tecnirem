@@ -32,9 +32,6 @@ const About = () => {
           style={{
             display: 'block',
             position: 'relative',
-            // width: '28em',
-            // height: '10em',
-            // marginBottom: "-1.5em"
           }}
         >
 
@@ -62,7 +59,7 @@ const About = () => {
               variant="h4"
 
             >
-                Somos un equipo de técnicos especialistas
+                Somos un equipo de técnicos especialistas con más de 15 años de experiencia
                 en adecuaciones, remodelaciones y mantenimiento
                 de espacios.            
                 </Typography>

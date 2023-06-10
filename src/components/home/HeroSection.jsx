@@ -4,6 +4,8 @@ import Carousel from "react-material-ui-carousel";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 
+import wpLink from "@/utils/wpLink";
+
 const HeroSection = () => {
   return (
     <Box sx={{ paddingTop: "64px" }}>
@@ -50,6 +52,7 @@ const HeroSection = () => {
               style={{ marginTop: "2em" }}
               variant="contained"
               color="primary"
+              href={wpLink}
             >
               Contáctanos
             </Button>

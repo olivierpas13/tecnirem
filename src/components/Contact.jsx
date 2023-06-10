@@ -37,11 +37,15 @@ const Contact= () => {
     message: '',
   });
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Aquí iría el código para enviar el formulario a un correo electrónico
-  };
+    const formattedMessage = `Hola, estoy interesado en sus servicios.\n\nNombre: ${formData.name}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}\nTipo de proyecto: ${formData.projectType}\nInterés: ${formData.interest}\nMensaje: ${formData.message}`;
+
+    const whatsappLink = `https://api.whatsapp.com/send/?phone=593983912977&text=${encodeURIComponent(formattedMessage)}`;
+
+    window.location.href = whatsappLink;
+
+  };    
 
   const handleFormChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -148,12 +152,13 @@ const Contact= () => {
         Encuéntranos
       </Typography>
       <MapContainer>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.166562209929!2d-78.52029048510995!3d-0.2966514353292171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b2d31d3c1d3e21%3A0x2829e18d7728a1b!2sSur%20de%20Quito%2C%20Quito%2C%20Ecuador!5e0!3m2!1sen!2sus!4v1650456791703!5m2!1sen!2sus"
-          title="Google Maps"
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
+      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.88194766243!2d-78.49130596314954!3d-0.21862139577334557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b2d30f1a4a53f9%3A0x5eeaae4eb8ce4b2a!2sCalle%20Galte%20S9-78%2C%20Quito%20170501!5e0!3m2!1sen!2sec!4v1650456791703!5m2!1sen!2sec"
+  title="Nuestra ubicación"
+  allowFullScreen
+  loading="lazy"
+></iframe>
+
       </MapContainer>
       <Typography variant="h6" component="h3" sx={{ marginTop: '24px' }}>
         Redes sociales

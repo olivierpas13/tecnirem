@@ -7,6 +7,7 @@ import LeftCarouselSection from "../global/LeftCarouselSection";
 import LeftImageSection from "../global/LeftImageSection";
 import RightImageSection from "../global/RightImageSection";
 import { mainTheme } from "@/utils/Pallete";
+import wpLink from "@/utils/wpLink";
 
 const ServicePage = ({
   mainTitle,
@@ -127,7 +128,7 @@ const ServicePage = ({
           >
             {callToActionText}
           </Typography>
-          <Fab variant="extended" color="white" sx={{ padding: "1em 4em" }}>
+          <Fab variant="extended" color="white" sx={{ padding: "1em 4em" }} href={wpLink}>
             {callToActionBtn}
           </Fab>
         </Box>
