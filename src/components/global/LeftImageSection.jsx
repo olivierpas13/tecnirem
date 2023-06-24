@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import { mainTheme } from "@/utils/Pallete";
 import { Button } from "@mui/material";
 
-const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescription, buttonColor }) => {
+const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescription, buttonColor, href }) => {
   return (
     <>
       <Grid
@@ -37,7 +37,7 @@ const LeftImageSection = ({ title, description, imageUrl, buttontext, bigDescrip
           {description}
         </Typography>
         {buttontext && (
-          <Button variant="outlined" color={buttonColor} style={{ margin: "1.5em", marginTop: "3em"  }}>
+          <Button variant="outlined" color={buttonColor} href={href? href: null} style={{ margin: "1.5em", marginTop: "3em"  }}>
             {buttontext}
           </Button>
         )}

@@ -9,7 +9,7 @@ const ServicesCards = () => {
           title={"Diseños de Espacios"}
           imageSrc={"/static/home/diseno.JPG"}
           buttonText={"Más información"}
-          buttonDestination={"/servicios/diseno"}
+          buttonDestination={"/servicios/diseno-de-espacios"}
         />
       </Grid>
       <Grid item md={4} >
@@ -27,7 +27,7 @@ const ServicesCards = () => {
           }
           imageSrc={"/static/home/remodelacion.JPG"}
           buttonText={"Más información"}
-          buttonDestination={"/servicios/remodelacion"}
+          buttonDestination={"/servicios/remodelacion-de-oficinas"}
         />
       </Grid>
     </Grid>

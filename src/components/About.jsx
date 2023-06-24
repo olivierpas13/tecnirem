@@ -2,6 +2,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
+import wpLink from '@/utils/wpLink';
 
 const About = () => {
   return (
@@ -63,7 +64,7 @@ const About = () => {
                 en adecuaciones, remodelaciones y mantenimiento
                 de espacios.            
                 </Typography>
-            <Button size='large' style={{marginTop: "1em"}}variant="contained" color="primary">
+            <Button size='large' href={wpLink} style={{marginTop: "1em"}}variant="contained" color="primary">
               contáctanos
             </Button>
           </Box>
