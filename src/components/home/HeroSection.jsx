@@ -65,7 +65,7 @@ const HeroSection = () => {
               height: "90vh",
               justifyContent: "center",
               alignItems: "center",
-              backgroundImage: "url(/static/home/bg-tecnirem2.jpg)",
+              backgroundImage: "url(/static/home/bg-tecnirem2.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center center",
             }}

@@ -15,7 +15,7 @@ const About = () => {
           }}
         >
           <Image
-            src="/static/about/bg-about-dark.jpg"
+            src="/static/about/bg-about-dark.webp"
             alt="Hero Image"
             fill
             quality={100}

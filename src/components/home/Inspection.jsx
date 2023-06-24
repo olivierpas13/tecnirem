@@ -11,7 +11,7 @@ const Inspection = () => {
     title: "Inspección gratuita",
     description: "¿Listo para dar el primer paso en tu proyecto? ¡Comienza con una inspección gratuita y sin compromiso! Nuestro equipo trabajará contigo para asegurarse de que tengas la mejor solución a tus necesidades.",
     buttonText: "Agenda tu cita",
-    imageSrc: "/static/home/inspeccion.jpg",
+    imageSrc: "/static/home/inspeccion.webp",
   }
 
   return (

@@ -10,7 +10,7 @@ import { mainTheme } from '@/utils/Pallete';
 
 const images = [
   {
-    src: '/static/masonry/rem2.jpg',
+    src: '/static/masonry/rem2.webp',
     alt: 'Image 2',
     width: 400,
     height: 600,
@@ -22,7 +22,7 @@ const images = [
     height: 400,
   },
   {
-    src: '/static/masonry/tec22.jpg',
+    src: '/static/masonry/tec22.webp',
     alt: 'Image 5',
     width: 550,
     height: 450,
@@ -41,7 +41,7 @@ const images = [
   },
 
   {
-    src: '/static/masonry/tec27.jpg',
+    src: '/static/masonry/tec27.webp',
     alt: 'Image 9',
     width: 400,
     height: 600,
@@ -53,7 +53,7 @@ const images = [
     height: 350,
   },
   {
-    src: '/static/masonry/est2.jpg',
+    src: '/static/masonry/est2.webp',
     alt: 'Image 4',
     width: 450,
     height: 400,
