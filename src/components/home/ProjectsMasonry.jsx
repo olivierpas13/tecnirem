@@ -34,7 +34,7 @@ const images = [
     height: 400,
   },
   {
-    src: '/static/masonry/checked7.png',
+    src: '/static/masonry/checked7.webp',
     alt: 'Image 7',
     width: 450,
     height: 350,
@@ -47,7 +47,7 @@ const images = [
     height: 600,
   },
   {
-    src: '/static/masonry/checked1.png',
+    src: '/static/masonry/checked1.webp',
     alt: 'Image 1',
     width: 450,
     height: 350,
