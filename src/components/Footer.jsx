@@ -22,7 +22,7 @@ const Footer = () => {
       }}
     >
       <Grid container spacing={2} alignItems="center">
-        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} md={3} sx={{ textAlign: "center" }}>
             <Image
             width={180}
             height={30}
@@ -40,7 +40,7 @@ const Footer = () => {
             Quito - Ecuador
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} md={3.5} sx={{ textAlign: "center" }}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
             CONTACTO
           </Typography>
@@ -57,13 +57,13 @@ const Footer = () => {
             tecnirem@gmail.com
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} md={3.5} sx={{ textAlign: "center" }}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
             SÍGUENOS
           </Typography>
           <Grid container justifyContent="center" sx={{ mt: "1rem" }}>
             <a
-              href="https://www.facebook.com/tecnirem.ec/"
+              href="https://www.facebook.com/profile.php?id=100090380890906&mibextid=ZbWKwL"
               target="_blank"
               rel="noreferrer"
               aria-label="Facebook"
@@ -72,7 +72,7 @@ const Footer = () => {
               <FaFacebookF size={24} />
             </a>
             <a
-              href="https://twitter.com/TecniRemEc"
+              href="https://twitter.com/tecnirem?t=S0r1q6uUxhlukS5zRX2Aow&s=09"
               target="_blank"
               rel="noreferrer"
               aria-label="Twitter"
@@ -81,7 +81,7 @@ const Footer = () => {
               <FaTwitter size={24} />
             </a>
             <a
-              href="https://www.instagram.com/tecnirem_ec/"
+              href="https://instagram.com/tecnirem?igshid=MzNlNGNkZWQ4Mg=="
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
@@ -91,6 +91,12 @@ const Footer = () => {
             </a>
           </Grid>
         </Grid>
+        <Grid item xs={12} md={2} sx={{ textAlign: "center", fontFamily: "monospace"}}>
+          <p style={{fontWeight: "bold", fontSize: "1.15em"}}>Pagina Amiga</p>
+            <a style={{color: "white", textDecoration: "none"}} href="http://www.doplim.ec" title="Doplim Clasificados Gratis" target="_blank">Doplim Clasificados Gratis</a><br />
+            <a style={{color: "white", textDecoration: "none" }} href="http://www.doplim.ec/post-ad.html" title="Publicar Aviso Gratis Ecuador" target="_blank">Publicar Aviso Gratis is Ecuador</a><br />
+            <a style={{color: "white", textDecoration: "none" }} href="http://www.doplim.ec/inmuebles-y-propiedades-r-4" title="Clasificados de Inmuebles Ecuador" target="_blank">Clasificados de Inmuebles Ecuador</a>
+          </Grid>
       </Grid>
     </Container>
   );
